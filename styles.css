@@ -1,0 +1,209 @@
+:root {
+  --bg: #F4EFE8;
+  --bg-soft: #ECE5DA;
+  --ink: #3A3550;
+  --ink-soft: rgba(58, 53, 80, 0.72);
+  --card: #FBF8F3;
+  --bezel: #3A3550;
+  --accent: #E56E60;
+  --d1: #E56E60; --d2: #EBA660; --d3: #F5DD5E; --d4: #8EB37A;
+  --d5: #64BFDD; --d6: #6E6EB4; --d7: #8A64AB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1C1B26;
+    --bg-soft: #232230;
+    --ink: #EDE8E0;
+    --ink-soft: rgba(237, 232, 224, 0.72);
+    --card: #26242F;
+    --bezel: #100F16;
+    --accent: #EE8578;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+:lang(ko) body,
+body:lang(ko) {
+  word-break: keep-all;
+  line-height: 1.8;
+}
+
+/* ---------- language toggle ---------- */
+.lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  border: 1px solid var(--ink-soft);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.lang-toggle:hover { border-color: var(--ink); }
+
+/* ---------- hero ---------- */
+.hero {
+  min-height: 92svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(4rem, 10vh, 7rem) 1.5rem 3rem;
+}
+
+.hero-cube {
+  width: clamp(220px, 38vw, 340px);
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.wordmark {
+  font-family: Quicksand, "Pretendard Variable", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  letter-spacing: 0.01em;
+  margin: 0 0 1rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 0 0 1.6rem;
+}
+.dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dots .d1 { background: var(--d1); }
+.dots .d2 { background: var(--d2); }
+.dots .d3 { background: var(--d3); }
+.dots .d4 { background: var(--d4); }
+.dots .d5 { background: var(--d5); }
+.dots .d6 { background: var(--d6); }
+.dots .d7 { background: var(--d7); }
+
+.tagline {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0 0 1.2rem;
+}
+
+.coming {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+  background: var(--bg-soft);
+  border-radius: 999px;
+  padding: 0.45rem 1.2rem;
+  margin: 0;
+}
+.coming .sep { opacity: 0.5; }
+
+/* ---------- sections ---------- */
+main section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5.5rem) 1.5rem;
+}
+
+main .shots-section { max-width: 1100px; }
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 1.2rem;
+}
+
+section p { margin: 0 0 1em; color: var(--ink); }
+
+/* ---------- screenshots ---------- */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+  margin-top: 2rem;
+}
+
+.phone {
+  margin: 0;
+  text-align: center;
+}
+
+.phone img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 1.6rem;
+  border: 9px solid var(--bezel);
+  box-shadow: 0 18px 40px -18px rgba(30, 25, 55, 0.35);
+  display: block;
+  margin: 0 auto;
+}
+
+.phone figcaption {
+  margin-top: 0.9rem;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- contact / footer ---------- */
+.contact .mail {
+  font-size: 21px;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+footer a { color: inherit; }
+footer .legal { margin: 0 0 0.5rem; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- motion (opt-in only) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
+  }
+}
