@@ -1,0 +1,3 @@
+# Uncut Stone Studio — authorized digital sellers for our apps (IAB app-ads.txt)
+# Seven Puzzle (com.sevenpuzzle.mobile) monetizes via Google AdMob, publisher pub-5220940392014666.
+google.com, pub-5220940392014666, DIRECT, f08c47fec0942fa0
