@@ -165,8 +165,9 @@ section p { margin: 0 0 1em; color: var(--ink); }
   margin: 0 auto;
 }
 
-/* the preview video is a taller aspect (886x1920) — narrow it so card heights line up */
-.phone video { width: 92.2%; max-width: 294px; }
+/* dedicated gameplay-video section — the one moving element gets its own stage */
+.video-solo { margin-top: 2rem; }
+.video-solo video { max-width: 360px; }
 
 .phone figcaption {
   margin-top: 0.9rem;
