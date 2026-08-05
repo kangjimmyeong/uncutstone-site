@@ -35,6 +35,7 @@
   color: var(--ink-soft); font-size: 0.9rem; text-align: center; padding: 12px;
 }
 .photo-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+.photo-slot.wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
 .milestones { list-style: none; padding: 0; margin: 18px 0 0; }
 .milestones li { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); }
 .milestones li:last-child { border-bottom: 0; }
@@ -89,7 +90,7 @@
       <li><span class="year">2026</span><span data-en="Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game" data-ko="한국교육콘텐츠연구소가 언컷스톤 스튜디오를 설립, 교구를 게임으로 재탄생">Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game</span></li>
     </ul>
     <div class="photo-row">
-      <figure class="photo-slot"><img src="/assets/story/teachers_classroom.jpg" alt="Teachers testing a prototype in a school classroom" loading="lazy"></figure>
+      <figure class="photo-slot wide"><img src="/assets/story/teachers_classroom.jpg" alt="Teachers testing a prototype in a school classroom" loading="lazy"></figure>
       <figure class="photo-slot"><img src="/assets/story/teachers_cafe.jpg" alt="A workshop with teachers around In-Us learning materials" loading="lazy"></figure>
       <figure class="photo-slot"><img src="/assets/story/teachers_roundtable.jpg" alt="A round-table study session with teachers" loading="lazy"></figure>
     </div>
