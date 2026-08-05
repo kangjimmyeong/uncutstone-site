@@ -42,4 +42,12 @@
   } else {
     sections.forEach(function (s) { s.classList.add("in"); });
   }
+
+  /* ---------- gameplay video: honour reduced motion ---------- */
+  var video = document.querySelector(".phone video");
+  if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.removeAttribute("autoplay");
+    video.setAttribute("controls", "");
+    video.pause();
+  }
 })();
