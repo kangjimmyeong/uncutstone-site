@@ -58,6 +58,10 @@
   font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 6px;
 }
 .backlink { display: inline-block; margin-top: 28px; }
+.thumbs { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); margin: 20px auto 0; max-width: 520px; }
+.thumbs img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--bezel) 12%, transparent); }
+main section { padding-top: clamp(2.2rem, 6vh, 3.6rem); padding-bottom: clamp(2.2rem, 6vh, 3.6rem); }
 </style>
 </head>
 <body>
@@ -72,24 +76,24 @@
 
 <main>
   <section class="reveal" aria-labelledby="s1-h">
+  <div class="wrap">
     <span class="kicker" data-en="01 · Classroom" data-ko="01 · 교실">01 · Classroom</span>
-    <h2 id="s1-h" data-en="The puzzle began in a classroom" data-ko="퍼즐은 교실에서 시작되었습니다">The puzzle began in a classroom</h2>
-    <p data-en="Seven Puzzle began as a teacher's tool: seven numbered wooden blocks, made for children to hold, turn, and see space through their hands."
-       data-ko="세븐 퍼즐은 한 선생님의 교구에서 시작되었습니다. 숫자가 적힌 일곱 개의 나무 조각. 아이들이 손으로 들고, 돌리고, 공간을 바라보게 하려는 도구였습니다.">Seven Puzzle began as a teacher's tool: seven numbered wooden blocks, made for children to hold, turn, and see space through their hands.</p>
-    <p data-en="In Korea's public-school classrooms and gifted-education programs, about a thousand students picked up those pieces. Small hands traced the wood grain, tried again, and heard the quiet click of a fit."
-       data-ko="그 조각들은 한국의 공교육 교실과 영재교육 수업에서 약 천 명의 학생들을 만났습니다. 작은 손들이 나뭇결을 만지고, 다시 맞추고, 조용히 맞물리는 소리를 들었습니다.">In Korea's public-school classrooms and gifted-education programs, about a thousand students picked up those pieces. Small hands traced the wood grain, tried again, and heard the quiet click of a fit.</p>
+    <h2 id="s1-h" data-en="It began in a classroom" data-ko="교실에서 시작되었습니다">It began in a classroom</h2>
+    <p data-en="A teacher&rsquo;s seven numbered wooden blocks. About a thousand children learned to see space with them."
+       data-ko="한 선생님이 만든, 숫자가 적힌 일곱 개의 나무 조각. 약 천 명의 아이들이 이 조각으로 공간을 배웠습니다.">A teacher&rsquo;s seven numbered wooden blocks. About a thousand children learned to see space with them.</p>
     <div class="photo-row">
-      <figure class="photo-slot"><img src="/assets/story/tool_box.jpg" alt="The original Seven Puzzle teaching tool — wooden numbered cubes in their yellow box" loading="lazy"><figcaption data-en="The original tool, as teachers made it" data-ko="교사의 손에서 태어난 실물 교구">The original tool, as teachers made it</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/seven_pieces.jpg" alt="The seven wooden pieces, numbered 1 to 7" loading="lazy"><figcaption data-en="Seven pieces, numbered one to seven" data-ko="1부터 7까지, 일곱 조각">Seven pieces, numbered one to seven</figcaption></figure>
+      <figure class="photo-slot"><img src="/assets/story/tool_box.jpg" alt="The original Seven Puzzle teaching tool" loading="lazy"></figure>
+      <figure class="photo-slot"><img src="/assets/story/seven_pieces.jpg" alt="The seven wooden pieces, numbered 1 to 7" loading="lazy"></figure>
     </div>
+  </div>
   </section>
 
-
-  <section class="reveal" aria-labelledby="s3-h">
+  <section class="reveal band-lavender" aria-labelledby="s3-h">
+  <div class="wrap">
     <span class="kicker" data-en="02 · Ten years" data-ko="02 · 십 년">02 · Ten years</span>
-    <h2 id="s3-h" data-en="Ten years went into the work" data-ko="10년이 그 일에 쌓였습니다">Ten years went into the work</h2>
-    <p data-en="For ten years, we built with schoolteachers: 50+ programs, or 100+ if we count the ones that failed. The work reached 400+ schools and hundreds of thousands of students."
-       data-ko="십 년 동안 학교 선생님들과 함께 만들었습니다. 50개가 넘는 프로그램을 만들었고, 실패까지 세면 100개가 넘습니다. 그 시간은 400곳이 넘는 학교와 수십만 명의 학생에게 닿았습니다.">For ten years, we built with schoolteachers: 50+ programs, or 100+ if we count the ones that failed. The work reached 400+ schools and hundreds of thousands of students.</p>
+    <h2 id="s3-h" data-en="Ten years with teachers" data-ko="십 년, 선생님들과 함께">Ten years with teachers</h2>
+    <p data-en="400+ schools. Hundreds of thousands of students."
+       data-ko="400여 개 학교, 수십만 명의 학생.">400+ schools. Hundreds of thousands of students.</p>
     <ul class="milestones">
       <li><span class="year">2012</span><span data-en="Founds In-Us as a startup club at Incheon National University" data-ko="인천대학교 창업동아리로 '인어스'를 시작">Founds In-Us as a startup club at Incheon National University</span></li>
       <li><span class="year">2016</span><span data-en="Selected as an outstanding team in the Ministry of Economy and Finance's 1st Youth Cooperative Startup Program" data-ko="기획재정부 제1회 청년협동조합 창업지원사업 우수팀 선정">Selected as an outstanding team in the Ministry of Economy and Finance's 1st Youth Cooperative Startup Program</span></li>
@@ -97,25 +101,29 @@
       <li><span class="year">2019</span><span data-en="Featured as the subject of an MBN television documentary — " data-ko="MBN 성공다큐 〈최고다〉 단독 주인공 — ">Featured as the subject of an MBN television documentary — <a href="https://tv.apple.com/kr/episode/%EC%B2%AD%EB%85%84%EA%B5%90%EC%9C%A1%EC%82%AC%EC%97%85%EA%B0%80-%EA%B0%95%EC%A7%84%EB%AA%85-%EB%8C%80%ED%91%9C/umc.cmc.6nrbw39p5teizgy6qz1qkc5d8" rel="noopener">watch on Apple TV</a></span></li>
       <li><span class="year">2026</span><span data-en="Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game" data-ko="한국교육콘텐츠연구소가 언컷스톤 스튜디오를 설립, 교구를 게임으로 재탄생">Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game</span></li>
     </ul>
-    <div class="photo-row">
-      <figure class="photo-slot wide"><img src="/assets/story/teachers_classroom.jpg" alt="Teachers testing a prototype in a school classroom" loading="lazy"><figcaption data-en="Testing with teachers, in a classroom" data-ko="교실에서, 선생님들과의 검증">Testing with teachers, in a classroom</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/teachers_cafe.jpg" alt="A workshop with teachers around In-Us learning materials" loading="lazy"><figcaption data-en="A workshop around the materials" data-ko="교재를 사이에 둔 워크숍">A workshop around the materials</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/teachers_roundtable.jpg" alt="A round-table study session with teachers" loading="lazy"><figcaption data-en="A study session, heads together" data-ko="머리를 맞댄 연구 모임">A study session, heads together</figcaption></figure>
+    <div class="thumbs">
+      <img src="/assets/story/teachers_classroom.jpg" alt="Working with teachers in a classroom" loading="lazy">
+      <img src="/assets/story/teachers_cafe.jpg" alt="A workshop with teachers" loading="lazy">
+      <img src="/assets/story/teachers_roundtable.jpg" alt="A study session with teachers" loading="lazy">
     </div>
+  </div>
   </section>
 
-  <section class="reveal" aria-labelledby="s4-h">
+  <section class="reveal shots-section" aria-labelledby="s4-h">
+  <div class="wrap">
     <span class="kicker" data-en="03 · The game" data-ko="03 · 게임">03 · The game</span>
     <h2 id="s4-h" data-en="Now it becomes a game" data-ko="이제, 게임이 되었습니다">Now it becomes a game</h2>
-    <p data-en="Read the small blueprint cube floating above. Turn a piece in your mind, then in your hand. Press and hold, and it settles with a soft snap and a gentle pulse."
-       data-ko="위에 떠 있는 작은 설계도 큐브를 읽어 보세요. 조각을 마음속에서 먼저 돌리고, 손으로 다시 돌립니다. 길게 누르면 부드럽게 맞물리고, 작은 진동이 조용히 전해집니다.">Read the small blueprint cube floating above. Turn a piece in your mind, then in your hand. Press and hold, and it settles with a soft snap and a gentle pulse.</p>
-    <p data-en="The 200 stages climb from one piece to the full seven-piece cube. Later stages veil parts of the blueprint, so you hold more of the shape in your head. If you choose, the Spatial Intelligence Report shows your percentile among players worldwide."
-       data-ko="200개의 스테이지는 한 조각에서 시작해 일곱 조각 큐브까지 천천히 올라갑니다. 뒤로 갈수록 설계도의 일부가 가려져, 더 많은 모양을 머릿속에 붙잡아 두어야 합니다. 원하시면 공간지능 리포트에서 전 세계 플레이어 사이의 백분위도 확인할 수 있습니다.">The 200 stages climb from one piece to the full seven-piece cube. Later stages veil parts of the blueprint, so you hold more of the shape in your head. If you choose, the Spatial Intelligence Report shows your percentile among players worldwide.</p>
-    <p data-en="There are no timers, no lives, no failure screens, and no forced ads. It works offline, supports 12 languages, and has dark mode. After every stage, one quiet line appears &mdash; 200 stages, 200 different lines, including &ldquo;Your effort shines quietly.&rdquo;"
-       data-ko="타이머도, 목숨도, 실패 화면도, 강제 광고도 없습니다. 오프라인에서도 할 수 있고, 12개 언어와 다크 모드를 지원합니다. 스테이지를 마칠 때마다 조용한 한 줄이 나타납니다. 200개의 스테이지, 200개의 서로 다른 문장 &mdash; &ldquo;당신의 노력이 빛나요.&rdquo;">There are no timers, no lives, no failure screens, and no forced ads. It works offline, supports 12 languages, and has dark mode. After every stage, one quiet line appears &mdash; 200 stages, 200 different lines, including &ldquo;Your effort shines quietly.&rdquo;</p>
-    <p class="quote" data-en="Education is slow, but certain &mdash; and sometimes it stays beside you as a quiet game."
-       data-ko="교육은 느리지만 확실합니다. 때로는 조용한 게임이 되어 곁에 머뭅니다.">Education is slow, but certain &mdash; and sometimes it stays beside you as a quiet game.</p>
+    <p data-en="Read the blueprint, turn it in your mind &mdash; click. No timers, no lives, no pressure."
+       data-ko="설계도를 읽고, 마음속으로 돌리고 &mdash; 딸깍. 타이머도, 목숨도, 재촉도 없습니다.">Read the blueprint, turn it in your mind &mdash; click. No timers, no lives, no pressure.</p>
+    <div class="shots">
+      <figure class="phone"><img src="/assets/shot_menu.jpg" width="720" height="1427" loading="lazy" alt="Seven Puzzle main menu"></figure>
+      <figure class="phone"><img src="/assets/shot_play.jpg" width="720" height="1427" loading="lazy" alt="Seven Puzzle gameplay"></figure>
+      <figure class="phone"><img src="/assets/shot_dark.jpg" width="720" height="1427" loading="lazy" alt="Seven Puzzle dark mode"></figure>
+    </div>
+    <p class="quote" data-en="Education is slow, but certain."
+       data-ko="교육은 느리지만 확실합니다.">Education is slow, but certain.</p>
     <p style="text-align:center"><a class="backlink" href="/" data-en="&larr; Seven Puzzle home" data-ko="&larr; 세븐 퍼즐 홈으로">&larr; Seven Puzzle home</a></p>
+  </div>
   </section>
 </main>
 
