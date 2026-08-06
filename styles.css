@@ -59,43 +59,15 @@ body:lang(ko) {
 }
 .lang-toggle:hover { border-color: var(--ink); }
 
-/* ---------- hero (MV-style full-bleed colour field: the menu's day sky) ---------- */
+/* ---------- hero ---------- */
 .hero {
-  min-height: 96svh;
+  min-height: 92svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: clamp(4rem, 10vh, 7rem) 1.5rem 3rem;
-  background: linear-gradient(180deg, #A9C4DC 0%, #CBD8DC 45%, #EDE4D2 100%);
-}
-@media (prefers-color-scheme: dark) {
-  .hero { background: linear-gradient(180deg, #1B2233 0%, #232236 55%, #1C1B26 100%); }
-}
-:root[data-theme="dark"] .hero { background: linear-gradient(180deg, #1B2233 0%, #232236 55%, #1C1B26 100%); }
-:root[data-theme="light"] .hero { background: linear-gradient(180deg, #A9C4DC 0%, #CBD8DC 45%, #EDE4D2 100%); }
-
-/* hero → video jump chip (MV's centred play affordance, our calm chip) */
-.play-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 1.4rem;
-  padding: 0.65rem 1.5rem;
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 10px 26px -14px rgba(30, 25, 55, 0.45);
-}
-.play-chip .tri {
-  width: 0; height: 0;
-  border-left: 9px solid var(--accent);
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
 }
 
 .hero-cube {
@@ -151,44 +123,14 @@ body:lang(ko) {
 }
 .coming .sep { opacity: 0.5; }
 
-/* ---------- sections (MV-style: each band owns its full-width colour field) ---------- */
+/* ---------- sections ---------- */
 main section {
-  padding: clamp(3.4rem, 9vh, 6rem) 1.5rem;
-}
-main section > .wrap {
   max-width: 680px;
   margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5.5rem) 1.5rem;
 }
-main .shots-section > .wrap { max-width: 1100px; }
 
-/* band tints — our skin palette speaking the MV per-section colour language */
-.band-lavender { background: #ECE8F4; }
-.band-peach    { background: #F6E4D6; }
-@media (prefers-color-scheme: dark) {
-  .band-lavender { background: #242236; }
-  .band-peach    { background: #2B2430; }
-}
-:root[data-theme="dark"] .band-lavender { background: #242236; }
-:root[data-theme="dark"] .band-peach    { background: #2B2430; }
-:root[data-theme="light"] .band-lavender { background: #ECE8F4; }
-:root[data-theme="light"] .band-peach    { background: #F6E4D6; }
-
-/* story teaser band */
-.story-quote {
-  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
-  font-weight: 600;
-  line-height: 1.6;
-  margin: 0 0 0.8rem;
-}
-.story-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--accent);
-  padding-bottom: 2px;
-}
+main .shots-section { max-width: 1100px; }
 
 h2 {
   font-size: 28px;
