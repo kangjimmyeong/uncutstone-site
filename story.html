@@ -29,34 +29,18 @@
 .story-hero .tagline { margin-top: 10px; }
 .photo-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 24px 0 8px; }
 .photo-slot {
-  margin: 0; border-radius: 18px; overflow: hidden; background: var(--card);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--bezel) 14%, transparent);
+  border: 2px dashed color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: 16px; background: var(--card);
+  aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+  color: var(--ink-soft); font-size: 0.9rem; text-align: center; padding: 12px;
 }
-.photo-slot img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.photo-slot.wide { grid-column: 1 / -1; }
-.photo-slot.wide img { aspect-ratio: 16 / 9; }
-.photo-slot figcaption {
-  padding: 10px 14px 12px; font-size: 0.82rem; color: var(--ink-soft);
-  letter-spacing: 0.01em;
-}
-.kicker {
-  display: block; font-family: Quicksand, Pretendard, sans-serif; font-weight: 700;
-  font-size: 0.8rem; letter-spacing: 0.22em; color: var(--accent);
-  margin-bottom: 10px;
-}
+.photo-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
 .milestones { list-style: none; padding: 0; margin: 18px 0 0; }
 .milestones li { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); }
 .milestones li:last-child { border-bottom: 0; }
 .milestones .year { font-family: Quicksand, Pretendard, sans-serif; font-weight: 700; min-width: 52px; color: var(--accent); }
 .milestones a { color: inherit; }
-.quote {
-  position: relative; margin: 36px auto 0; max-width: 30ch;
-  text-align: center; font-size: 1.18rem; line-height: 1.9; color: var(--ink);
-}
-.quote::before {
-  content: "\201C"; display: block; font-family: Quicksand, serif;
-  font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 6px;
-}
+.quote { font-style: italic; text-align: center; margin: 28px auto 0; max-width: 34ch; font-size: 1.1rem; }
 .backlink { display: inline-block; margin-top: 28px; }
 </style>
 </head>
@@ -72,20 +56,18 @@
 
 <main>
   <section class="reveal" aria-labelledby="s1-h">
-    <span class="kicker" data-en="01 · Classroom" data-ko="01 · 교실">01 · Classroom</span>
     <h2 id="s1-h" data-en="The puzzle began in a classroom" data-ko="퍼즐은 교실에서 시작되었습니다">The puzzle began in a classroom</h2>
     <p data-en="Seven Puzzle began as a teacher's tool: seven numbered wooden blocks, made for children to hold, turn, and see space through their hands."
        data-ko="세븐 퍼즐은 한 선생님의 교구에서 시작되었습니다. 숫자가 적힌 일곱 개의 나무 조각. 아이들이 손으로 들고, 돌리고, 공간을 바라보게 하려는 도구였습니다.">Seven Puzzle began as a teacher's tool: seven numbered wooden blocks, made for children to hold, turn, and see space through their hands.</p>
     <p data-en="In Korea's public-school classrooms and gifted-education programs, about a thousand students picked up those pieces. Small hands traced the wood grain, tried again, and heard the quiet click of a fit."
        data-ko="그 조각들은 한국의 공교육 교실과 영재교육 수업에서 약 천 명의 학생들을 만났습니다. 작은 손들이 나뭇결을 만지고, 다시 맞추고, 조용히 맞물리는 소리를 들었습니다.">In Korea's public-school classrooms and gifted-education programs, about a thousand students picked up those pieces. Small hands traced the wood grain, tried again, and heard the quiet click of a fit.</p>
     <div class="photo-row">
-      <figure class="photo-slot"><img src="/assets/story/tool_box.jpg" alt="The original Seven Puzzle teaching tool — wooden numbered cubes in their yellow box" loading="lazy"><figcaption data-en="The original tool, as teachers made it" data-ko="교사의 손에서 태어난 실물 교구">The original tool, as teachers made it</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/seven_pieces.jpg" alt="The seven wooden pieces, numbered 1 to 7" loading="lazy"><figcaption data-en="Seven pieces, numbered one to seven" data-ko="1부터 7까지, 일곱 조각">Seven pieces, numbered one to seven</figcaption></figure>
+      <figure class="photo-slot"><img src="/assets/story/tool_box.jpg" alt="The original Seven Puzzle teaching tool — wooden numbered cubes in their yellow box" loading="lazy"></figure>
+      <figure class="photo-slot"><img src="/assets/story/seven_pieces.jpg" alt="The seven wooden pieces, numbered 1 to 7" loading="lazy"></figure>
     </div>
   </section>
 
   <section class="reveal" aria-labelledby="s2-h">
-    <span class="kicker" data-en="02 · One student" data-ko="02 · 한 학생">02 · One student</span>
     <h2 id="s2-h" data-en="One student set the direction" data-ko="한 학생이 길을 정해 주었습니다">One student set the direction</h2>
     <p data-en="When the founder was young, he saw a middle-school boy crying. The boy wanted to repair cars. But the adults around him said happiness meant becoming a civil servant or a doctor. That was Korea, back then. So the boy was folding away his dream."
        data-ko="젊은 창업자는 어느 날 한 중학생이 우는 모습을 보았습니다. 아이는 자동차를 고치는 사람이 되고 싶어 했습니다. 하지만 주변 어른들은 공무원이나 의사가 되어야 행복하다고 말했습니다. 그때의 한국은 그랬습니다. 그래서 아이는 자기 꿈을 접고 있었습니다.">When the founder was young, he saw a middle-school boy crying. The boy wanted to repair cars. But the adults around him said happiness meant becoming a civil servant or a doctor. That was Korea, back then. So the boy was folding away his dream.</p>
@@ -94,7 +76,6 @@
   </section>
 
   <section class="reveal" aria-labelledby="s3-h">
-    <span class="kicker" data-en="03 · Ten years" data-ko="03 · 십 년">03 · Ten years</span>
     <h2 id="s3-h" data-en="Ten years went into the work" data-ko="10년이 그 일에 쌓였습니다">Ten years went into the work</h2>
     <p data-en="For ten years, In-Us sat with elementary, middle, and high school teachers and built learning tools for real classrooms. More than fifty programs reached students; more than a hundred, if the failed ones are counted too."
        data-ko="그 뒤로 10년 동안 인어스는 초·중·고 선생님들과 마주 앉아, 실제 교실에서 쓸 배움의 도구를 만들었습니다. 학생들에게 닿은 프로그램은 50개가 넘습니다. 실패한 것까지 세면 100개가 넘고요.">For ten years, In-Us sat with elementary, middle, and high school teachers and built learning tools for real classrooms. More than fifty programs reached students; more than a hundred, if the failed ones are counted too.</p>
@@ -108,14 +89,13 @@
       <li><span class="year">2026</span><span data-en="Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game" data-ko="한국교육콘텐츠연구소가 언컷스톤 스튜디오를 설립, 교구를 게임으로 재탄생">Korea Education Contents Lab founds Uncut Stone Studio to rebuild the classroom tool as a game</span></li>
     </ul>
     <div class="photo-row">
-      <figure class="photo-slot wide"><img src="/assets/story/teachers_classroom.jpg" alt="Teachers testing a prototype in a school classroom" loading="lazy"><figcaption data-en="Testing with teachers, in a classroom" data-ko="교실에서, 선생님들과의 검증">Testing with teachers, in a classroom</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/teachers_cafe.jpg" alt="A workshop with teachers around In-Us learning materials" loading="lazy"><figcaption data-en="A workshop around the materials" data-ko="교재를 사이에 둔 워크숍">A workshop around the materials</figcaption></figure>
-      <figure class="photo-slot"><img src="/assets/story/teachers_roundtable.jpg" alt="A round-table study session with teachers" loading="lazy"><figcaption data-en="A study session, heads together" data-ko="머리를 맞댄 연구 모임">A study session, heads together</figcaption></figure>
+      <figure class="photo-slot"><img src="/assets/story/teachers_classroom.jpg" alt="Teachers testing a prototype in a school classroom" loading="lazy"></figure>
+      <figure class="photo-slot"><img src="/assets/story/teachers_cafe.jpg" alt="A workshop with teachers around In-Us learning materials" loading="lazy"></figure>
+      <figure class="photo-slot"><img src="/assets/story/teachers_roundtable.jpg" alt="A round-table study session with teachers" loading="lazy"></figure>
     </div>
   </section>
 
   <section class="reveal" aria-labelledby="s4-h">
-    <span class="kicker" data-en="04 · Now" data-ko="04 · 지금">04 · Now</span>
     <h2 id="s4-h" data-en="Now it rests beside you" data-ko="이제 당신 곁에 놓입니다">Now it rests beside you</h2>
     <p data-en="Now the wooden puzzle lives as a calm 3D soma-cube game. Two hundred stages. Twelve languages. Offline. Dark mode. No timers, no lives, no failure screen, no forced ads."
        data-ko="이제 그 나무 퍼즐은 차분한 3D 소마큐브 게임이 되었습니다. 200개의 스테이지, 12개 언어, 오프라인 플레이, 다크 모드. 타이머도, 목숨도, 실패 화면도, 강제로 보는 광고도 없습니다.">Now the wooden puzzle lives as a calm 3D soma-cube game. Two hundred stages. Twelve languages. Offline. Dark mode. No timers, no lives, no failure screen, no forced ads.</p>
